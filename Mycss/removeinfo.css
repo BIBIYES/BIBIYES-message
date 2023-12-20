@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'shota';
+    /* 字体名称 */
+    src: url('../font/二字元小青森简繁.ttf') format('truetype');
+    /* 字体文件路径和格式 */
+}
+
+body {
+    background-image: url('../images/remove.png');
+    background-size: cover;
+    text-align: center;
+    font-family: shota;
+    user-select: none;
+
+}
+
+#center {
+    margin: 0 auto;
+    width: 960px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 设置元素的背景颜色和透明度 */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    
+}
+
+table {
+    border-radius: 10px;
+    width: 960px;
+}
+a{
+    text-decoration: none;
+    color:rgb(85 ,66,51);
+}
+img{
+    width: 30px;
+    opacity: 0.5;
+}
+img:hover{
+    opacity: 1;
+}
+.next{
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+    text-align: center;
+    line-height: 45px;
+    margin: 0 auto;
+    margin-top: 25px;
+
+}
+
+#nav{
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 40px;
+    margin-top: 10px;
+}
+.navigation{
+    width: 80px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s ease-in-out 0s;
+    float: left;
+    border-radius: 25%;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5px;
+    backdrop-filter: blur(20px);
+    
+}

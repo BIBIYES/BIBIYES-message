@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: shota;
+    color: rgb(85, 66, 51);
+    user-select: none;
+
+}
+
+@font-face {
+    font-family: 'shota';
+    /* 字体名称 */
+    src: url('../font/二字元小青森简繁.ttf') format('truetype');
+    /* 字体文件路径和格式 */
+}
+
+body {
+
+    background-image: url('../images/showinfo.png');
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    text-shadow: -1px -1px 0 #000,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    letter-spacing: 2px;
+}
+
+.centent {
+    margin: 0 auto;
+    width: 680px;
+    border: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    transform: translate( );
+    transition: all 0.5s ease-in-out 0s;
+}
+.centent:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+.left{
+    text-align: right;
+    font-size: 16px;
+    color: rgba(85, 66, 51,0.5);
+}
+.page-link{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
+a{
+    text-decoration: none;
+}
+.page-link:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.5s ease-in-out 0s;
+}
+#nav{
+    width: 180px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 40px;
+    margin-top: 10px;
+}
+.navigation{
+    width: 80px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s ease-in-out 0s;
+    float: left;
+    border-radius: 25%;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5px;
+    backdrop-filter: blur(20px);
+    transition: all 0.5s ease-in-out 0s;
+    
+}
+.navigation:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}

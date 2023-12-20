@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: shota;
+    color: rgb(85, 66, 51);
+
+
+
+}
+
+@font-face {
+    font-family: 'shota';
+    /* 字体名称 */
+    src: url('../font/二字元小青森简繁.ttf') format('truetype');
+    /* 字体文件路径和格式 */
+}
+
+body {
+
+
+    background-image: url('../images/addinfo.png');
+    background-size: cover;
+
+
+}
+#center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+    width: 700px;
+    height: 650px;
+    padding-top: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 设置元素的背景颜色和透明度 */
+    backdrop-filter: blur(8px);
+    /* 添加模糊效果，数值可以根据需要进行调整 */
+    transition: width 1s ease-in-out 1s;
+}
+
+.input {
+    width: 300px;
+    height: 50px;
+    border: 1px rgb(85, 66, 51) solid;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+input {
+    width: 250px;
+    height: 45px;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 16px;
+}
+
+h2 {
+    font-family: shota;
+    font-size: 32px;
+}
+
+textarea {
+    width: 600px;
+    height: 300px;
+    border-radius: 30px;
+    margin-top: 5px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    background: none;
+    transition: all 0.3s ease-in-out 0s;
+    font-size: 16px;
+    border: 1px rgb(85, 66, 51) solid;
+}
+
+textarea:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.input:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 设置元素的背景颜色和透明度 */
+    backdrop-filter: blur(20px);
+    /* 添加模糊效果，数值可以根据需要进行调整 */
+    border-radius: 50px;
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+div{
+    user-select: none;
+}

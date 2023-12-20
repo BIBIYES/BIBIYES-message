@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: shota;
+    color: rgb(85, 66, 51);
+
+}
+
+@font-face {
+    font-family: 'shota';
+    /* 字体名称 */
+    src: url('../font/二字元小青森简繁.ttf') format('truetype');
+    /* 字体文件路径和格式 */
+}
+
+body {
+
+
+    background-image: url('../images/Login.png');
+    background-size: cover;
+
+}
+
+#loginwindow {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    width: 400px;
+    height: 100%;
+    padding-top: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    /* 设置元素的背景颜色和透明度 */
+    backdrop-filter: blur(8px);
+}
+
+input {
+    width: 195px;
+    height: 48px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: none;
+
+}
+
+.input {
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 设置元素的背景颜色和透明度 */
+    backdrop-filter: blur(10px);
+}
+
+
+.submit {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -96%);
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 设置元素的背景颜色和透明度 */
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.submit a {
+    text-decoration: none;
+    color: black;
+    line-height: 70px;
+    font-size: 38px;
+
+}
+.submit:hover{
+    background-color: rgba(85, 66, 51,0.5);
+}
+div { user-select: none;}
