@@ -2,12 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: shota;
     color: rgb(85, 66, 51);
 
@@ -71,7 +65,7 @@ input {
     border-radius: 100%;
 
     position: relative;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-60%, -96%);
     background-color: rgba(255, 255, 255, 0.5);
@@ -83,7 +77,7 @@ input {
 .submit a {
     text-decoration: none;
     color: black;
-    line-height: 70px;
+    line-height: 60px;
     font-size: 38px;
 
 }
@@ -91,3 +85,7 @@ input {
     background-color: rgba(85, 66, 51,0.5);
 }
 div { user-select: none;}
+#input-box{
+    height: 50px;
+    margin-top: 125px;
+}
