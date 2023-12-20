@@ -24,13 +24,13 @@ body {
 
 
 }
+
 #center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    border-radius: 10px;
     width: 700px;
     height: 650px;
     padding-top: 50px;
@@ -101,6 +101,36 @@ textarea:hover {
 .button:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
-div{
+
+div {
     user-select: none;
+}
+
+.file {
+    display: none;
+}
+
+/* 定义自定义按钮样式 */
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: rgba(85, 66, 51, 0.3);
+    /* 半透明的按钮 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+}
+
+.upload-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 鼠标悬停时的颜色 */
 }
