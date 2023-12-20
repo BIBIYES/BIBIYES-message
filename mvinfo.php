@@ -43,7 +43,7 @@
                 echo '<textarea name="message" placeholder="在这里输入你的留言">' . $message . '</textarea><br>';
                 echo '</div>';
                 echo '<div class="button">';
-                echo '<input type="submit" value="提交留言" class="提交留言">';
+                echo '<input type="submit" value="完成修改！" class="提交留言">';
                 echo '</div>';
                 echo '</form>';
             } else {

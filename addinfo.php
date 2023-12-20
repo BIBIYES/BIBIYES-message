@@ -30,29 +30,19 @@
 
         <?php
         require_once("conn.php");
-        // 检查表单提交
-        
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // 获取表单数据
             $name = $_POST['name'];
             $email = $_POST['email'];
             $message = $_POST['message'];
             $mailbox = $_FILES['mailbox']['name'];
 
-            // 准备 SQL 语句并执行插入
-            // 准备 SQL 语句并执行插入
-        
             if ($_FILES['mailbox']['error'] === UPLOAD_ERR_OK) {
-                $uploadDir = './mailbox/'; // 你想要保存图片的目录
-        
-                // 获取上传的文件名和临时文件路径
+                $uploadDir = './mailbox/';
                 $fileName = $_FILES['mailbox']['name'];
                 $tmpFilePath = $_FILES['mailbox']['tmp_name'];
-
-                // 拼接目标文件路径
                 $targetFilePath = $uploadDir . $fileName;
 
-                // 将临时文件移动到目标位置
                 if (move_uploaded_file($tmpFilePath, $targetFilePath)) {
                     echo '文件已上传至 ' . $targetFilePath;
                 } else {
@@ -62,17 +52,20 @@
                 echo '上传文件时发生错误：' . $_FILES['mailbox']['error'];
             }
 
-            $sql = "INSERT INTO messages (name, email, message,avatar) VALUES ('$name', '$email', '$message','$mailbox')";
-
-            $conn->query($sql);
-            header("Location: showinfo.php");
-            exit(); // 确保在重定向后立即退出脚本
+            // 使用预处理语句来执行安全的数据库插入操作
+            $sql = "INSERT INTO messages (name, email, message, avatar) VALUES (?, ?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ssss", $name, $email, $message, $mailbox); // 绑定参数
+            $stmt->execute(); // 执行预处理语句
         
-        }
+            $stmt->close();
+            $conn->close();
 
-        // 关闭连接
-        $conn->close();
+            header("Location: showinfo.php");
+            exit();
+        }
         ?>
+
     </div>
     <script src="./js/addinfo.js"></script>
 </body>
