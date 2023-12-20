@@ -19,7 +19,8 @@
     $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
     $offset = ($page - 1) * 5;
 
-    $sql = "SELECT * FROM messages LIMIT $offset, 5";
+    $sql = "SELECT * FROM messages ORDER BY created_at DESC LIMIT $offset, 5";
+
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
