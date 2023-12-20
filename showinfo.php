@@ -25,6 +25,7 @@
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             echo "<div class='centent'>";
+            echo "<div class='avatar'><img src='" ."./mailbox/". $row['avatar'] . "'></div>";
             echo "<p>昵称: " . $row["name"] . "</p>";
             echo "<p class='email'>邮件: " . $row["email"] . "</p>";
             echo "<p>内容: " . $row["message"] . "</p>";
@@ -58,5 +59,6 @@
 
     $conn->close();
 ?>
+<script src="./js/showinfo.js"></script>
 </body>
 </html>
